@@ -1,0 +1,5 @@
+####required images from public repos have been mirrored with stc local quay, please use the local images and update the local-secret for enabling the OCP to pull the image from quay
+Postgresql:
+image:registry.apps.ocp-hub.r301.telco.stc/redhat/git:pg-16.2.0-debian-12-r8
+GitEA:
+image:registry.apps.ocp-hub.r301.telco.stc/redhat/gitea:1.21.11-rootless
