@@ -1,0 +1,15 @@
+#Source: gitea/templates/gitea/pvc.yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: postgres
+  namespace: gitea
+  labels:
+    {}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 10Gi

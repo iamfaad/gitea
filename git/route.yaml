@@ -1,0 +1,20 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: git
+  namespace: "gitea"
+  labels:
+    app: gitea
+    app.kubernetes.io/name: gitea
+spec:
+  to:
+    kind: Service
+    name: gitea-http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+    destinationCACertificate: ''
+  host: git.apps.ocp-hub.r301.telco.stc
+  port:
+    targetPort: http
+
