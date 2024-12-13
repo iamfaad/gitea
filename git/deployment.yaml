@@ -173,6 +173,5 @@ spec:
         - name: temp
           emptyDir: {}
         - name: data
-          persistentVolumeClaim:
-            claimName: git
+          emptyDir: {}
           
