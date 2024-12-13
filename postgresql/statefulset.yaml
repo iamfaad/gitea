@@ -148,7 +148,7 @@ spec:
               subPath: app-logs-dir
             - name: dshm
               mountPath: /dev/shm
-            - name: data
+            - name: empty-dir
               mountPath: /bitnami/postgresql
       volumes:
         - name: empty-dir
@@ -156,6 +156,3 @@ spec:
         - name: dshm
           emptyDir:
             medium: Memory
-        - name: data
-          persistentVolumeClaim:
-            name: postgres
